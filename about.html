@@ -2,33 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Us - Shutter Bliss</title>
+  <title>About Us - Gelila Photo Studio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header>
-    <nav>
-      <h1>Shutter Bliss</h1>
+    <nav aria-label="Main Navigation">
+      <div class="logo">
+        <img src="logo.png" alt="Gelila Photo Studio Logo" />
+        <span class="studio-name">Gelila Photo Studio</span>
+      </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="page">
-    <h2>About Us</h2>
-    <p>Shutter Bliss is a Calgary-based photography studio dedicated to capturing life's most important moments. Led by award-winning photographer Jane Doe, our team specializes in weddings, portraits, and lifestyle shoots.</p>
-    <img src="images/studio.jpg" alt="Studio">
-    <p>We believe in authenticity, beauty, and telling stories through imagery. Whether you're getting married or updating your portfolio, we’re here to make your moments timeless.</p>
+  <main class="page about-page">
+    <section class="about-hero">
+      <h2 class="highlight-heading">Meet Gelila Photo Studio</h2>
+      <p class="big-intro">
+        Passionate storytellers. Detail-obsessed professionals. 
+        We immortalize your most cherished memories with artistry and heart.
+      </p>
+      <img src="images/studio.jpg" alt="Inside Gelila Photo Studio" class="about-hero-image" />
+    </section>
+
+    <section class="about-bio-cards">
+      <div class="about-card">
+        <h3>Our Story</h3>
+        <p>
+          Founded in Calgary by award-winning photographer Jane Doe, Gelila Photo Studio began with a dream: to turn each fleeting moment into a timeless piece of art.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>Our Philosophy</h3>
+        <p>
+          To us, every photo session is a collaboration. We believe in authentic beauty, real emotion, and images that speak to the soul.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>Our Promise</h3>
+        <p>
+          Whether you’re planning a wedding or capturing a milestone, our team is dedicated to making you feel celebrated—and your images unforgettable.
+        </p>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <blockquote>
+        “The Gelila team made us feel at ease, and our photos are absolutely stunning! Couldn’t have asked for more.”<br>
+        <span class="testimonial-author">– Happy Client</span>
+      </blockquote>
+      <a href="portfolio.html" class="btn">See Our Work</a>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Shutter Bliss Studio</p>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo" />
+        <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact & Hours</h3>
+      <p>109, 2640-52nd Street NE, Calgary, AB T1Y 3R6</p>
+      <p>(587) 890-6024</p>
+      <p>info@gelilaphoto.com</p>
+      <p><strong>Hours:</strong><br>
+        Mon – Sat: 9:00 am – 8:00 pm<br>
+        Sunday: 10:00 am – 6:00 pm
+      </p>
+        <div class="footer-social">
+          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
