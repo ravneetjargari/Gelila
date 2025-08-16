@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shutter Bliss Studio | Home</title>
+  <title>Gelila Photo Studio | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-  <nav>
+
+<header>
+  <nav aria-label="Main Navigation">
     <div class="logo">
-  <img src="logo.png" alt="Gelila Photo Studio Logo" />
-  <span class="studio-name">Gelila Photo Studio</span>
-</div>
+      <img src="logo.png" alt="Gelila Photo Studio Logo" />
+      <span class="studio-name">Gelila Photo Studio</span>
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -24,49 +25,121 @@
   </nav>
 </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Capture Life’s Moments in Style</h2>
-      <p>Professional photography for weddings, events, and more.</p>
-      <a href="contact.html" class="btn">Book a Session</a>
-    </div>
-  </section>
+<section class="hero">
+  <div class="hero-text">
+    <h2 id="hero-title">Capture Life’s Moments in Style</h2>
+    <p id="hero-subtext">Professional photography for weddings, events, and more.</p>
+    <a href="contact.html" class="btn">Book an Appointment</a>
+  </div>
+</section>
 
-  <section class="preview">
+<section class="preview">
   <h2>Our Services</h2>
   <div class="grid">
     <div class="card">
-      <img src="wedding.jpg" alt="Wedding Photography">
+      <img src="wedding.jpg" alt="Bride and groom on wedding day">
       <h3>Weddings</h3>
     </div>
     <div class="card">
-      <img src="baptism.jpg" alt="Baptism Photography">
+      <img src="baptism.jpg" alt="Baptism ceremony photography">
       <h3>Baptisms</h3>
     </div>
     <div class="card">
-      <img src="passport.jpg" alt="Passport Photos">
+      <img src="passport.jpg" alt="Passport photo service">
       <h3>Passport Photos</h3>
     </div>
     <div class="card">
-      <img src="events.jpg" alt="Event Photography">
+      <img src="events.jpg" alt="Event photography setup">
       <h3>Events</h3>
     </div>
     <div class="card">
-      <img src="birthday.jpg" alt="Birthday Photography">
+      <img src="birthday.jpg" alt="Birthday party photography">
       <h3>Birthdays</h3>
     </div>
   </div>
   <a href="services.html" class="btn">View All Services</a>
 </section>
 
-  <section class="preview">
-    <h2>Meet the Photographer</h2>
-    <p>With 10+ years of experience, our lead photographer brings stories to life through each lens.</p>
-    <a href="about.html" class="btn">Read More</a>
-  </section>
+<section class="preview">
+  <h2>Meet the Photographer</h2>
+  <p>With 10+ years of experience, our lead photographer brings stories to life through each lens.</p>
+  <a href="about.html" class="btn">Read More</a>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Shutter Bliss Studio</p>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo">
+      <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact & Hours</h3>
+      <p>3609 17 Ave SE, Calgary, AB</p>
+      <p>(403) 475-3839</p>
+      <p>info@gelilaphoto.com</p>
+      <p><strong>Hours:</strong><br>
+        Mon – Fri: 10:00 am – 9:00 pm<br>
+        Saturday: 10:30 am – 9:00 pm<br>
+        Sunday: 11:00 am – 6:00 pm
+      </p>
+      <div class="footer-social">
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const slides = [
+  {
+    image: 'hero.png',
+    title: 'Capture Life’s Moments in Style',
+    subtext: 'Professional photography for weddings, events, and more.'
+  },
+  {
+    image: 'hero2.jpg',
+    title: 'Every Picture Tells a Story',
+    subtext: 'Turning your memories into timeless treasures.'
+  },
+  {
+    image: 'hero3.jpg',
+    title: 'Celebrate Life, One Click at a Time',
+    subtext: 'From birthdays to baptisms, we cover it all.'
+  }
+];
+
+let currentSlide = 0;
+const heroSection = document.querySelector('.hero');
+const heroTitle = document.getElementById('hero-title');
+const heroSubtext = document.getElementById('hero-subtext');
+
+function changeSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${slides[currentSlide].image}')`;
+  heroTitle.textContent = slides[currentSlide].title;
+  heroSubtext.textContent = slides[currentSlide].subtext;
+}
+
+// Initial setup
+heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${slides[0].image}')`;
+
+// Auto change every 5 seconds
+setInterval(changeSlide, 5000);
+</script>
+
 </body>
 </html>
