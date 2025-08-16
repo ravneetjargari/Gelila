@@ -292,6 +292,15 @@ footer {
   margin-bottom: 8px;
 }
 
+.page{
+  text-align: center;
+  margin-top: 50px;
+  color: var(--brand-orange);
+}
+.btn{
+  margin-bottom: 50px;
+}
+
 .footer-links a {
   color: var(--bg-light);
   text-decoration: none;
@@ -466,6 +475,8 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
+
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {

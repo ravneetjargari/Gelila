@@ -3,95 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <title>Services - Gelila Photo Studio</title>
+  <meta name="description" content="Explore the full range of professional photography services offered by Gelila Photo Studio in Calgary and Alberta, including wedding, event, baptism, birthday and passport photos." />
+  <meta name="keywords" content="Calgary photography services, Alberta photographer, wedding photography, baptism photography, event photography, passport photos Calgary, birthday photographer, Gelila Photo Studio" />
+  <meta name="author" content="Gelila Photo Studio" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <nav aria-label="Main Navigation">
-      <div class="logo">
-        <img src="logo.png" alt="Gelila Photo Studio Logo" />
-        <span class="studio-name">Gelila Photo Studio</span>
-      </div>
+<header>
+  <nav aria-label="Main Navigation">
+    <div class="logo">
+      <img src="logo.png" alt="Gelila Photo Studio Logo" />
+      <span class="studio-name">Gelila Photo Studio</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bride and groom wedding day">
+      <h3>Weddings</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1721862822882-61221b0d62bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Baby baptism ceremony">
+      <h3>Baptisms</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1553697388-94e804e2f0f6?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Passport photo headshot">
+      <h3>Passport Photos</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516600164266-f3b8166ae679?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event photography crowd">
+      <h3>Events</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Birthday party celebration">
+      <h3>Birthdays</h3>
+    </div>
+  </div>
+
+  <!-- Banner Image Below Service Tiles -->
+  <div style="text-align:center; margin:2.5rem 0;">
+    <img 
+      src="passport-banner.png" 
+      alt="Studio banner - Gelila Photo Studio"
+      style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);" />
+  </div>
+
+  <a href="contact.html" class="btn">Get a Quote</a>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo" />
+      <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Useful Links</h3>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <main class="page services-page">
-    <section class="services-hero">
-      <h2 class="highlight-heading">Photography Services</h2>
-      <p class="big-intro">Discover solutions for every milestone, big or small—crafted with precision and artistry by Gelila Photo Studio.</p>
-    </section>
-
-    <section class="services-grid">
-      <div class="service-card">
-        <img src="images/wedding.jpg" alt="Wedding Photography" class="service-image" />
-        <h3>Wedding Photography</h3>
-        <p>Full-day coverage capturing the tears, laughter, and dances. Candid and editorial storytelling for your special day.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/portrait.jpg" alt="Portrait Sessions" class="service-image" />
-        <h3>Portrait Sessions</h3>
-        <p>Modern indoor/outdoor portraits with gentle coaching and professional retouching. Individuals, couples, and families welcome.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/events.jpg" alt="Event Coverage" class="service-image" />
-        <h3>Event Coverage</h3>
-        <p>Expert coverage for birthdays, engagements, graduations, and personal events you'll never want to forget.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/headshot.jpg" alt="Corporate Headshots" class="service-image" />
-        <h3>Corporate Headshots</h3>
-        <p>On-site or in-studio, our headshots are tailored to show your best, most confident and professional side.</p>
-      </div>
-    </section>
-    <div class="center-btn">
-      <a href="contact.html" class="btn">Get a Personalized Quote</a>
     </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo" />
-        <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-         <h3>Contact & Hours</h3>
-      <p>109, 2640-52nd Street NE, Calgary, AB T1Y 3R6</p>
-      <p>(587) 890-6024</p>
+    <div class="footer-contact">
+      <h3>Contact & Hours</h3>
+      <p>3609 17 Ave SE, Calgary, AB</p>
+      <p>(403) 475-3839</p>
       <p>info@gelilaphoto.com</p>
       <p><strong>Hours:</strong><br>
-        Mon – Sat: 9:00 am – 8:00 pm<br>
-        Sunday: 10:00 am – 6:00 pm
+        Mon – Fri: 10:00 am – 9:00 pm<br>
+        Saturday: 10:30 am – 9:00 pm<br>
+        Sunday: 11:00 am – 6:00 pm
       </p>
-        <div class="footer-social">
-          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-        </div>
+      <div class="footer-social">
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
