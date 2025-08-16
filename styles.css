@@ -33,6 +33,15 @@ nav {
   flex-direction: column; /* stack logo and nav menu vertically */
   align-items: center;
   text-align: center;
+  
+}
+
+.nav-sticky {
+   display: flex;
+  flex-direction: column; /* stack logo and nav menu vertically */
+  align-items: center;
+  text-align: center;
+  
 }
 
 .logo {
@@ -171,6 +180,9 @@ section p {
   font-size: 1.1rem;
 }
 
+.card, .service-card {
+  will-change: transform;
+}
 /* Hover effect with turquoise highlight */
 .card:hover {
   transform: translateY(-5px);
@@ -442,7 +454,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform .3s, box-shadow .3s, border .3s;
+  transition: transform .15s, box-shadow .3s, border .3s;
   border: 3px solid transparent;
   min-height: 420px;
 }
