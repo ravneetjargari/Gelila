@@ -121,6 +121,15 @@
 function toggleMenu() {
   document.querySelector(".nav-menu").classList.toggle("active");
   }
+  document.addEventListener("click", function(event) {
+  const menu = document.querySelector(".nav-menu");
+  const hamburger = document.querySelector(".hamburger");
+
+  // If click is outside the menu AND hamburger
+  if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+    menu.classList.remove("active");
+  }
+});
 </script>
 </body>
 </html>
