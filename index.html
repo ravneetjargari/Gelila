@@ -21,17 +21,17 @@
 
 
 <header>
-  <nav aria-label="Main Navigation">
+  <nav class="main-nav" aria-label="Main Navigation">
     <div class="logo">
       <img src="logo.png" alt="Gelila Photo Studio Logo" />
       <span class="studio-name">Gelila Photo Studio</span>
     </div>
-    
-  </nav>
-</header>
 
-<div class="sticky-nav">
-    <ul>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Nav Links -->
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
@@ -39,7 +39,8 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    </div>
+  </nav>
+</header>
 
 <section class="hero">
   <div class="hero-text">
@@ -161,6 +162,10 @@ heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0
 
 // Auto change every 5 seconds
 setInterval(changeSlide, 5000);
+
+function toggleMenu() {
+  document.querySelector(".nav-menu").classList.toggle("active");
+  }
 </script>
 
 </body>

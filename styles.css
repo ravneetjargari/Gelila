@@ -549,4 +549,179 @@ footer {
     gap: 10px;
     margin-top: 10px;
   }
+
+  /* --- Responsive Mobile Styles --- */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .logo img {
+    height: 120px;
+  }
+
+  .studio-name {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Stack nav vertically */
+  .sticky-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 90px;
+  }
+
+  .studio-name {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .hero {
+    height: auto;
+    padding: 50px 15px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .grid,
+  .services-page .services-grid {
+    grid-template-columns: 1fr; /* stack cards */
+  }
+
+  .card img,
+  .service-image {
+    height: 160px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* stack footer sections */
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 15px;
+  }
+}
+
+/* Very Small Screens (phones in portrait) */
+@media (max-width: 480px) {
+  .studio-name {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .about-card {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .testimonial-section blockquote {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* --- Navigation --- */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Default nav menu (desktop) */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  background: #ff6600;
+  border-radius: 4px;
+}
+
+/* --- Mobile Menu --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden off-screen */
+    height: 100%;
+    width: 250px;
+    background: #000;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-menu.active {
+    right: 0; /* slide in */
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+  }
+}
 }

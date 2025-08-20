@@ -20,26 +20,28 @@
 
 
   <header>
-  <nav aria-label="Main Navigation">
+  <nav class="main-nav" aria-label="Main Navigation">
     <div class="logo">
       <img src="logo.png" alt="Gelila Photo Studio Logo" />
       <span class="studio-name">Gelila Photo Studio</span>
     </div>
-    
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
 </header>
 
-
+<!-- Slide-out Navigation -->
 <div class="sticky-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    </div>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
 
   <main class="page about-page">
     <section class="about-hero">
@@ -116,6 +118,10 @@
       <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
     </div>
   </footer>
-
+<script>
+function toggleMenu() {
+  document.querySelector(".sticky-nav").classList.toggle("active");
+}
+</script>
 </body>
 </html>
