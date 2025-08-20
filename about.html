@@ -11,11 +11,11 @@
 
 <div class="top-header">
   <div class="contact-left">
-    <img src="phone-icon.svg" alt="Phone Icon" class="icon" />
+    <img src="phone.jpeg" alt="Phone Icon" class="icon" />
     <span>(587) 890-6024</span>
   </div>
   <div class="contact-right">
-    <img src="email-icon.svg" alt="Email Icon" class="icon" />
+    <img src="mail.png" alt="Email Icon" class="icon" />
     <span>info@gelilaphoto.com</span>
   </div>
 </div>
@@ -52,7 +52,7 @@
         Passionate storytellers. Detail-obsessed professionals. 
         We immortalize your most cherished memories with artistry and heart.
       </p>
-      <img src="images/studio.jpg" alt="Inside Gelila Photo Studio" class="about-hero-image" />
+      <img src="studio.jpeg" alt="Inside Gelila Photo Studio" class="about-hero-image" />
     </section>
 
     <section class="about-bio-cards">
@@ -84,6 +84,30 @@
       <a href="portfolio.html" class="btn">See Our Work</a>
     </section>
   </main>
+
+  <!-- Add this after your about-bio-cards section -->
+<section class="location-section">
+  <h2 class="highlight-heading">Visit Our Studio</h2>
+  <p>See where the magic happens! Here’s a glimpse of our studio exterior and the building we’re located in.</p>
+  <div class="location-gallery">
+    <img src="studio-outside.jpeg" alt="Gelila Photo Studio Outside" />
+    <img src="hallway.jpeg" alt="Studio Building Exterior" />
+  </div>
+</section>
+
+<!-- Add this after the location-section -->
+<div class="footer-map">
+  <h2 class="highlight-heading">Find Us</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.7968177794887!2d-113.9586237229942!3d51.07530067171818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537164b1d051633d%3A0x56e3dc126a06e327!2s2640%2052%20St%20NE%20%23109%2C%20Calgary%2C%20AB%20T1Y%203R6!5e0!3m2!1sen!2sca!4v1755671767862!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
 
   <footer class="site-footer">
     <div class="footer-container">
@@ -122,8 +146,8 @@
   </footer>
 <script>
 function toggleMenu() {
-  document.querySelector(".sticky-nav").classList.toggle("active");
-}
+  document.querySelector(".nav-menu").classList.toggle("active");
+  }
 </script>
 </body>
 </html>

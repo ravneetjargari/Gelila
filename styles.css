@@ -71,7 +71,6 @@ nav {
 .icon {
   width: 18px;
   height: 18px;
-  filter: brightness(0) invert(1); /* white color for black background */
 }
 
 
@@ -494,6 +493,32 @@ footer {
   margin: 0 auto 2rem auto;
   max-width: 1100px;
 }
+.location-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.location-section .location-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.location-section .location-gallery img {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Google Map */
+.footer-map {
+  margin-top: 40px;
+  text-align: center;
+}
 
 .service-card {
   background: #fff;
@@ -550,6 +575,10 @@ footer {
     margin-top: 10px;
   }
 
+  .location-section .location-gallery img {
+    width: 100%;
+    max-width: 100%;
+  }
   /* --- Responsive Mobile Styles --- */
 
 /* Tablet and below */
