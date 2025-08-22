@@ -566,6 +566,12 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
