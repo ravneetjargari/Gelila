@@ -566,12 +566,17 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
+
 .hamburger {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
+  background-color: #ff6600; /* orange background */
+  padding: 8px 12px;
+  border-radius: 4px;
 }
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
@@ -749,7 +754,7 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
-    align-items: left;
+    margin-right: auto;
   }
 
   .nav-menu {
