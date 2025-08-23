@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # or "master" depending on your repo
+
+media_folder: "static/uploads"   # where uploaded images go (in repo)
+public_folder: "/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Category", name: "category", widget: "select", options: ["Weddings", "Baptisms", "Events", "Passports", "Birthdays"] }
+      - { label: "Description", name: "description", widget: "text", required: false }
