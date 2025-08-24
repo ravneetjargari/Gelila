@@ -8,5 +8,14 @@
 <body>
   <!-- Loads Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms-app@latest/dist/netlify-cms.js"></script>
+
+    <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+      alert("Error: " + message + 
+            "\nSource: " + source + 
+            "\nLine: " + lineno + 
+            "\nColumn: " + colno);
+    };
+  </script>
 </body>
 </html>
