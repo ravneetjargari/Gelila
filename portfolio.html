@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Top Header -->
 <div class="top-header">
   <div class="contact-left">
     <img src="phone.jpeg" alt="Phone Icon" class="icon" />
@@ -20,7 +21,7 @@
   </div>
 </div>
 
-
+<!-- Navigation -->
 <header>
   <nav class="main-nav" aria-label="Main Navigation">
     <div class="logo">
@@ -35,7 +36,7 @@
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -43,64 +44,42 @@
   </nav>
 </header>
 
-
+<!-- Portfolio -->
 <main class="portfolio">
+  <h1 style="text-align:center; margin: 2rem 0;">Our Portfolio</h1>
 
   <!-- Weddings -->
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="Weddings">
     <h2>Weddings</h2>
-    <div class="grid">
-      <img src="wedding1.jpeg" alt="Wedding photo 1">
-      <img src="wedding2.jpeg" alt="Wedding photo 2">
-      <img src="wedding3.jpeg" alt="Wedding photo 3">
-    </div>
+    <div class="grid"></div>
   </section>
 
   <!-- Baptisms -->
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="Baptisms">
     <h2>Baptisms</h2>
-    <div class="grid">
-      <img src="baptism1.jpeg" alt="Baptism photo 1">
-      <img src="baptism2.jpeg" alt="Baptism photo 2">
-      <img src="baptism3.jpeg" alt="Baptism photo 3">
-      <img src="baptism4.jpeg" alt="Baptism photo 4">
-      <img src="baptism5.jpeg" alt="Baptism photo 5">
-      <img src="baptism6.jpeg" alt="Baptism photo 6">
-      <!-- Keep adding as many baptism photos as you need -->
-    </div>
+    <div class="grid"></div>
   </section>
 
   <!-- Events -->
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="Events">
     <h2>Events</h2>
-    <div class="grid">
-      <img src="event1.jpg" alt="Event photo 1">
-      <img src="event2.jpg" alt="Event photo 2">
-      <img src="event3.jpg" alt="Event photo 3">
-    </div>
+    <div class="grid"></div>
   </section>
 
-  <!-- Passport Photos -->
-  <section class="portfolio-section">
+  <!-- Passports -->
+  <section class="portfolio-section" id="Passports">
     <h2>Passport Photos</h2>
-    <div class="grid">
-      <img src="passport1.jpg" alt="Passport photo 1">
-      <img src="passport2.jpg" alt="Passport photo 2">
-    </div>
+    <div class="grid"></div>
   </section>
 
   <!-- Birthdays -->
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="Birthdays">
     <h2>Birthdays</h2>
-    <div class="grid">
-      <img src="birthday1.jpg" alt="Birthday photo 1">
-      <img src="birthday2.jpg" alt="Birthday photo 2">
-      <img src="birthday3.jpg" alt="Birthday photo 3">
-    </div>
+    <div class="grid"></div>
   </section>
-
 </main>
 
+<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-about">
@@ -137,6 +116,7 @@
   </div>
 </footer>
 
+<!-- Scripts -->
 <script>
 function toggleMenu() {
   document.querySelector(".nav-menu").classList.toggle("active");
@@ -148,6 +128,29 @@ document.addEventListener("click", function(event) {
     menu.classList.remove("active");
   }
 });
+
+// Load images from Netlify CMS JSON
+async function loadPortfolio() {
+  try {
+    const res = await fetch("/content/gallery/index.json");
+    const items = await res.json();
+
+    items.forEach(data => {
+      const section = document.getElementById(data.category);
+      if (!section) return;
+
+      const grid = section.querySelector(".grid");
+      const img = document.createElement("img");
+      img.src = data.image;
+      img.alt = data.title;
+      grid.appendChild(img);
+    });
+  } catch (err) {
+    console.error("Error loading portfolio:", err);
+  }
+}
+
+loadPortfolio();
 </script>
 
 </body>
