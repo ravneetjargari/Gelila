@@ -50,31 +50,31 @@
 
   <!-- Weddings -->
   <section class="portfolio-section" id="Weddings">
-    <h2>Weddings</h2>
+    <h2 style="text-align:center;">Weddings</h2>
     <div class="grid"></div>
   </section>
 
   <!-- Baptisms -->
   <section class="portfolio-section" id="Baptisms">
-    <h2>Baptisms</h2>
+    <h2 style="text-align:center;">Baptisms</h2>
     <div class="grid"></div>
   </section>
 
   <!-- Events -->
   <section class="portfolio-section" id="Events">
-    <h2>Events</h2>
+    <h2 style="text-align:center;">Events</h2>
     <div class="grid"></div>
   </section>
 
   <!-- Passports -->
   <section class="portfolio-section" id="Passports">
-    <h2>Passport Photos</h2>
+    <h2 style="text-align:center;">Passport Photos</h2>
     <div class="grid"></div>
   </section>
 
   <!-- Birthdays -->
   <section class="portfolio-section" id="Birthdays">
-    <h2>Birthdays</h2>
+    <h2 style="text-align:center;">Birthdays</h2>
     <div class="grid"></div>
   </section>
 </main>
@@ -129,10 +129,11 @@ document.addEventListener("click", function(event) {
   }
 });
 
-// Load images from Netlify CMS JSON
+// Load portfolio images from JSON
 async function loadPortfolio() {
   try {
-    const res = await fetch("/content/gallery/index.json");
+    const res = await fetch("/data/portfolio.json"); // <-- your JSON file path
+    if (!res.ok) throw new Error("Failed to fetch portfolio.json");
     const items = await res.json();
 
     items.forEach(data => {
