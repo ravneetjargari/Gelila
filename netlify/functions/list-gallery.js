@@ -5,20 +5,13 @@ export async function handler(event, context) {
   try {
     const galleryDir = path.join(process.cwd(), "content/gallery");
 
-    // Read all files in gallery folder
-    const files = fs.readdirSync(galleryDir);
+    // Read all .json files in gallery folder
+    const files = fs.readdirSync(galleryDir).filter(f => f.endsWith(".json"));
 
-    let items = [];
-
-    for (const file of files) {
-      if (file.endsWith(".json")) {
-        const filePath = path.join(galleryDir, file);
-        const content = fs.readFileSync(filePath, "utf8");
-        const data = JSON.parse(content);
-        items.push(data);
-      }
-      // if your CMS creates .md files instead, I’ll adjust this part
-    }
+    const items = files.map(file => {
+      const content = fs.readFileSync(path.join(galleryDir, file), "utf8");
+      return JSON.parse(content);
+    });
 
     return {
       statusCode: 200,
