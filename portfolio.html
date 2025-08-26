@@ -131,6 +131,7 @@ document.addEventListener("click", function(event) {
   }
 });
 </script>
+
 <script>
 async function loadPortfolio() {
   try {
@@ -138,18 +139,21 @@ async function loadPortfolio() {
     if (!res.ok) throw new Error("Failed to fetch gallery data");
     const items = await res.json();
 
-    const gallery = document.getElementById("portfolio-gallery");
-    gallery.innerHTML = "";
-
     items.forEach(item => {
+      // Find the section for the category
+      const section = document.getElementById(item.category);
+      if (!section) return;
+
+      const grid = section.querySelector(".grid");
+      if (!grid) return;
+
       const div = document.createElement("div");
       div.classList.add("portfolio-item");
       div.innerHTML = `
         <img src="${item.image}" alt="${item.title}">
         <h3>${item.title}</h3>
-        <p>${item.description}</p>
       `;
-      gallery.appendChild(div);
+      grid.appendChild(div);
     });
   } catch (err) {
     console.error("Error loading portfolio:", err);
