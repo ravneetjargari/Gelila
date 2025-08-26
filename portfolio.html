@@ -130,6 +130,7 @@ document.addEventListener("click", function(event) {
 });
 
 // Load portfolio images from JSON
+// Load portfolio images from JSON
 async function loadPortfolio() {
   try {
     const res = await fetch("/data/portfolio.json"); // <-- your JSON file path
@@ -142,7 +143,9 @@ async function loadPortfolio() {
 
       const grid = section.querySelector(".grid");
       const img = document.createElement("img");
-      img.src = data.image;
+      
+      // Update image source to use the correct path
+      img.src = `/uploads/${data.image}`; // Correct the path here
       img.alt = data.title;
       grid.appendChild(img);
     });
@@ -152,6 +155,7 @@ async function loadPortfolio() {
 }
 
 loadPortfolio();
+
 </script>
 
 </body>
