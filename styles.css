@@ -73,28 +73,21 @@ nav {
   height: 18px;
 }
 
-/* ===========================
-   Portfolio Grid
-=========================== */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  column-count: 3; /* number of columns */
+  column-gap: 20px;
   padding: 20px;
 }
 
-/* ===========================
-   Portfolio Item
-   - No fixed height
-   - Grows with image
-=========================== */
 .portfolio-item {
-  position: relative;
+  display: inline-block; /* needed for masonry */
   width: 100%;
-  overflow: hidden;
+  margin-bottom: 20px;
   border-radius: 8px;
-  background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+  overflow: hidden;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -103,18 +96,13 @@ nav {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ===========================
-   Portfolio Images
-   - Full image shown
-   - Height auto-adjusts
-=========================== */
 .portfolio-item img {
   width: 100%;
-  height: auto;         /* keep aspect ratio */
+  height: auto;
   display: block;
-  object-fit: contain;  /* no cropping */
-  transition: transform 0.4s ease;
+  object-fit: contain;
   border-radius: 4px;
+  transition: transform 0.4s ease;
   background: #fafafa;
 }
 
@@ -122,9 +110,7 @@ nav {
   transform: scale(1.02);
 }
 
-/* ===========================
-   Title Overlay
-=========================== */
+/* Title Overlay */
 .portfolio-item h3 {
   position: absolute;
   bottom: 0;
