@@ -73,39 +73,45 @@ nav {
   height: 18px;
 }
 
+/* ===========================
+   Portfolio Grid (Masonry Style)
+=========================== */
 .grid {
-  column-count: 3; /* number of columns */
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
+/* Portfolio Item */
 .portfolio-item {
-  display: inline-block; /* needed for masonry */
   width: 100%;
-  margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background: #fff;
   overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 .portfolio-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Portfolio Images */
 .portfolio-item img {
-  width: 100%;
-  height: auto;
+  width: 100%;       /* full width */
+  height: auto;      /* keep natural aspect ratio */
   display: block;
-  object-fit: contain;
   border-radius: 4px;
   transition: transform 0.4s ease;
-  background: #fafafa;
+  background: #fafafa;  /* light bg for transparency */
+  object-fit: contain;
 }
 
+/* Hover zoom effect */
 .portfolio-item:hover img {
   transform: scale(1.02);
 }
@@ -131,6 +137,19 @@ nav {
 .portfolio-item:hover h3 {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsive columns for smaller screens */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }
 
 .sticky-nav ul li a {
