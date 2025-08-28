@@ -169,7 +169,19 @@ async function loadPortfolio() {
 
 loadPortfolio();
 </script>
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".portfolio-item img").forEach(img => {
+    img.addEventListener("load", () => {
+      if (img.naturalWidth > img.naturalHeight) {
+        img.classList.add("landscape");
+      } else {
+        img.classList.add("portrait");
+      }
+    });
+  });
+});
+</script>
 
 
 </body>
