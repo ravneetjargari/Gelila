@@ -2,144 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio | Calgary Photographer | Gelila Photo Studio</title>
-  <meta name="description" content="Browse the Gelila Photo Studio portfolio featuring Calgary and Alberta wedding photography, family portraits, headshots, and event photography from Calgary’s trusted professional photographers." />
-  <meta name="keywords" content="Calgary photographer, portfolio, photography gallery, Alberta photos, wedding photography, family photography, headshots Calgary, event photographers Alberta, gelila photo studio portfolio" />
-  <meta name="author" content="Gelila Photo Studio" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gelila Photo Studio | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="top-header">
-    <div class="contact-left">
-      <img src="phone.jpeg" alt="Phone Icon" class="icon" />
-      <span>(587) 890-6024</span>
-    </div>
-    <div class="contact-right">
-      <img src="mail.png" alt="Email Icon" class="icon" />
-      <span>gelilastudio@gmail.com</span>
-    </div>
+<!-- Top Header -->
+<div class="top-header">
+  <div class="contact-left">
+    <img src="phone.jpeg" alt="Phone Icon" class="icon" />
+    <span>587-837-0678</span>
   </div>
+  <div class="contact-right">
+    <img src="mail.png" alt="Email Icon" class="icon" />
+    <span>gelilastudio@gmail.com</span>
+  </div>
+</div>
 
-  <header>
-    <nav class="main-nav" aria-label="Main Navigation">
-      <div class="logo">
-        <img src="logo.png" alt="Gelila Photo Studio Logo" />
-        <span class="studio-name">Gelila Photo Studio</span>
-      </div>
+<!-- Navigation -->
+<header>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <div class="logo">
+      <img src="logo.png" alt="Gelila Photo Studio Logo" />
+      <span class="studio-name">Gelila Photo Studio</span>
+    </div>
 
-      <!-- Hamburger for mobile -->
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-      <!-- Nav Links -->
-      <ul class="nav-menu">
+    <!-- Nav Links -->
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Portfolio -->
+<main class="portfolio">
+  <h1 style="text-align:center; margin: 2rem 0;">Our Portfolio</h1>
+
+  <!-- Weddings -->
+  <section class="portfolio-section" id="Weddings">
+    <h2 style="text-align:center;">Weddings</h2>
+    <div class="grid"></div>
+  </section>
+
+  <div id="portfolio-gallery" class="grid"></div>
+
+  <!-- Baptisms -->
+  <section class="portfolio-section" id="Baptisms">
+    <h2 style="text-align:center;">Baptisms</h2>
+    <div class="grid"></div>
+  </section>
+
+  <!-- Events -->
+  <section class="portfolio-section" id="Events">
+    <h2 style="text-align:center;">Events</h2>
+    <div class="grid"></div>
+  </section>
+
+  <!-- Passports -->
+  <section class="portfolio-section" id="Passports">
+    <h2 style="text-align:center;">Passport Photos</h2>
+    <div class="grid"></div>
+  </section>
+
+  <!-- Birthdays -->
+  <section class="portfolio-section" id="Birthdays">
+    <h2 style="text-align:center;">Birthdays</h2>
+    <div class="grid"></div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo">
+      <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <main class="page">
-    <h1 class="highlight-heading" style="text-align:center;">Our Photography Portfolio</h1>
-    <p class="big-intro" style="text-align:center;">
-      Explore our favorite work from Calgary and Alberta weddings, baptisms, and special event photography.
-      Every image is captured with creativity and care by the Gelila Photo Studio team.
-    </p>
-
-    <!-- Categories -->
-    <h2 class="highlight-heading" style="text-align:center; margin-top:2rem;">Baptisms</h2>
-    <section id="baptisms" class="gallery"></section>
-
-    <h2 class="highlight-heading" style="text-align:center; margin-top:2rem;">Weddings</h2>
-    <section id="weddings" class="gallery"></section>
-
-    <h2 class="highlight-heading" style="text-align:center; margin-top:2rem;">Events</h2>
-    <section id="events" class="gallery"></section>
-
-    <h2 class="highlight-heading" style="text-align:center; margin-top:2rem;">Passports</h2>
-    <section id="passports" class="gallery"></section>
-
-    <h2 class="highlight-heading" style="text-align:center; margin-top:2rem;">Birthdays</h2>
-    <section id="birthdays" class="gallery"></section>
-
-    <div style="text-align:center; margin:2.5rem 0 0 0;">
-      <a href="contact.html" class="btn">Book a Session</a>
     </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <img src="logo.png" alt="Gelila Photo Studio Logo" class="footer-logo" />
-        <p>We are a professional photography studio based in Calgary, AB, delivering high-quality, stunning images that inspire.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact & Hours</h3>
-        <p>3609 17 Ave SE, Calgary, AB</p>
-        <p>(403) 475-3839</p>
-        <p>gelilastudio@gmail.com</p>
-        <p><strong>Hours:</strong><br>
-          Mon – Fri: 10:00 am – 9:00 pm<br>
-          Saturday: 10:30 am – 9:00 pm<br>
-          Sunday: 11:00 am – 6:00 pm
-        </p>
-        <div class="footer-social">
-          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-        </div>
+    <div class="footer-contact">
+      <h3>Contact & Hours</h3>
+      <p>109, 2640-52nd Street NE, Calgary, AB T1Y 3R6</p>
+      <p>587-837-0678</p>
+      <p>gelilastudio@gmail.com</p>
+      <p><strong>Hours:</strong><br>
+        Mon – Sat: 9:00 am – 8:00 pm<br>
+        Sunday: 10:00 am – 6:00 pm
+      </p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/gelila.gelila.356403/"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/solomonmafea/"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Gelila Photo Studio. All Rights Reserved.</p>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script>
-    function toggleMenu() {
-      document.querySelector(".nav-menu").classList.toggle("active");
-    }
-    document.addEventListener("click", function(event) {
-      const menu = document.querySelector(".nav-menu");
-      const hamburger = document.querySelector(".hamburger");
-      if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-        menu.classList.remove("active");
+<!-- Scripts -->
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-menu").classList.toggle("active");
+}
+document.addEventListener("click", function(event) {
+  const menu = document.querySelector(".nav-menu");
+  const hamburger = document.querySelector(".hamburger");
+  if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+    menu.classList.remove("active");
+  }
+});
+</script>
+
+<script>
+async function loadPortfolio() {
+  try {
+    const res = await fetch("/.netlify/functions/list-gallery");
+    if (!res.ok) throw new Error("Failed to fetch gallery data");
+    const items = await res.json();
+
+    items.forEach(item => {
+      // Find the section for the category
+      const section = document.getElementById(item.category);
+      if (!section) return;
+
+      const grid = section.querySelector(".grid");
+      if (!grid) return;
+
+      // Fix image path: ensure it starts with /static
+      let imagePath = item.image;
+      if (!imagePath.startsWith("/static/")) {
+        imagePath = "/static" + imagePath;
+      }
+
+      // Build portfolio item
+      const div = document.createElement("div");
+      div.classList.add("portfolio-item");
+      div.innerHTML = `
+        <img src="${imagePath}" alt="${item.title}">
+        <h3>${item.titlre}</h3>
+      `;
+      grid.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error loading portfolio:", err);
+  }
+}
+
+loadPortfolio();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".portfolio-item img").forEach(img => {
+    img.addEventListener("load", () => {
+      if (img.naturalWidth > img.naturalHeight) {
+        img.classList.add("landscape");
+      } else {
+        img.classList.add("portrait");
       }
     });
+  });
+});
+</script>
 
-    // Load portfolio.json dynamically
-    fetch("/portfolio.json")
-      .then(res => res.json())
-      .then(items => {
-        items.forEach(item => {
-          let container = document.getElementById(item.category.toLowerCase());
-          if (container) {
-            let figure = document.createElement("figure");
-            let img = document.createElement("img");
-            img.src = item.image;
-            img.alt = item.title || item.category;
-            img.loading = "lazy";
-            figure.appendChild(img);
-            container.appendChild(figure);
-          }
-        });
-      })
-      .catch(err => console.error("Error loading portfolio:", err));
-  </script>
+
 </body>
 </html>

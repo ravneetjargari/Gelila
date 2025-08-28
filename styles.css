@@ -73,6 +73,84 @@ nav {
   height: 18px;
 }
 
+/* ===========================
+   Portfolio Grid (Masonry Style)
+=========================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Portfolio Images */
+.portfolio-item img {
+  width: 100%;       /* full width */
+  height: auto;      /* keep natural aspect ratio */
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+  background: #fafafa;  /* light bg for transparency */
+  object-fit: contain;
+}
+
+/* Hover zoom effect */
+.portfolio-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Title Overlay */
+.portfolio-item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive columns for smaller screens */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
 
 .sticky-nav ul li a {
   color: white;
@@ -233,6 +311,43 @@ section p {
   transform: translateY(-5px);
   border: 3px solid #00c8c8;
   box-shadow: 0 4px 15px rgba(0, 200, 200, 0.4);
+}
+
+.portfolio-section {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--brand-orange);
+}
+
+.portfolio-section .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-section .grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.portfolio-section .grid img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio h2{
+  color:#ff6600;
 }
 
 /* --- Portfolio Gallery --- */
@@ -567,6 +682,17 @@ footer {
   margin-top: 50px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background-color: #ff6600; /* orange background */
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   nav ul {
@@ -743,7 +869,7 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
-    align-items: left;
+    margin-right: auto;
   }
 
   .nav-menu {
